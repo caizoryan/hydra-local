@@ -3,7 +3,7 @@
 - Open the dir
 
 Then run
-```js
+```bash
 npm install
 node server.js
 ```
