@@ -21,37 +21,38 @@ update_page(code)
 
 function update_page(code) {
 	frame.srcdoc = `
-	<style>
-		* {
-			padding: 0;
-			margin: 0;
-		}
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
 
-		html, body {
-			height: 100%;
-			width: 100%;
-		}
+	html, body {
+		height: 100%;
+		width: 100%;
+	}
 
-		.code {
-			all: unset;
-			position: fixed;
-			width: 100vw;
-			height: 100vh;
-			color: white;
-			font-size: 24px;
-			font-family: monospace;
+	.code {
+		all: unset;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		color: white;
+		font-size: 24px;
+		font-family: monospace;
 
-		}
-	</style>
+	}
+</style>
 
-	<body>
-	<textarea class="code">
-		${code}
-	</textarea>
+<body>
+<textarea class="code">
+	${code}
+</textarea>
 </body>
-	<script src="./lib/hydra.js"></script>
-	<script>
-		${code}
-	</script>
+<script src="./lib/hydra.js"></script>
+<script>
+	${code}
+</script>
 `
 }
