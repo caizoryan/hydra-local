@@ -31,9 +31,24 @@ function update_page(code) {
 			height: 100%;
 			width: 100%;
 		}
+
+		.code {
+			all: unset;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			color: white;
+			font-size: 24px;
+			font-family: monospace;
+
+		}
 	</style>
 
-	<body></body>
+	<body>
+	<textarea class="code">
+		${code}
+	</textarea>
+</body>
 	<script src="./lib/hydra.js"></script>
 	<script>
 		${code}
